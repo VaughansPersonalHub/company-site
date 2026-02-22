@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCConnect | Supply Chain. Transformed.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #1a1a1a;
+            --gold: #c5a059;
+            --slate: #475569;
+        }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        /* Hero background using your specific team couch image */
+        /* Note: Ensure 'Gemini_Generated_Image_jrdkcajrdkcajrdk.jpg' is in the same folder */
+        .hero-bg {
+            background-image: linear-gradient(72deg, rgba(26,26,26,0.96) 0%, rgba(26,26,26,0.7) 100%), 
+                              url('Gemini_Generated_Image_jrdkcajrdkcajrdk.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+        }
+        
+        /* High-end image treatment */
+        .premium-img {
+            filter: contrast(1.02) saturate(0.9);
+            transition: all 0.5s ease;
+        }
+        .premium-img:hover {
+            filter: contrast(1.05) saturate(1);
+        }
+
+        .gold-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .engagement-item {
+            border-left: 1px solid #e2e8f0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .engagement-item::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 0;
+            height: 1.5rem;
+            width: 1px;
+            background: var(--gold);
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight text-slate-900">
+                SC<span class="text-[#c5a059]">CONNECT</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-10 text-[11px] uppercase tracking-[0.2em] font-semibold text-slate-500">
+                <a href="#story" class="hover:text-[#c5a059] transition-colors">Our Story</a>
+                <a href="#expertise" class="hover:text-[#c5a059] transition-colors">Expertise</a>
+                <a href="#engagements" class="hover:text-[#c5a059] transition-colors">Engagements</a>
+                <a href="#director" class="hover:text-[#c5a059] transition-colors">Director</a>
+                <a href="#contact" class="text-slate-900 border-b-2 border-[#c5a059] pb-1 text-[10px]">Consultation</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none" aria-label="Open Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white md:hidden flex flex-col p-12">
+        <button id="close-menu" class="self-end text-3xl mb-12" aria-label="Close Menu">&times;</button>
+        <div class="flex flex-col space-y-8 text-xl serif italic">
+            <a href="#story" class="mobile-link">Our Story</a>
+            <a href="#expertise" class="mobile-link">Expertise</a>
+            <a href="#engagements" class="mobile-link">Engagements</a>
+            <a href="#director" class="mobile-link">Director</a>
+            <a href="#contact" class="mobile-link text-[#c5a059]">Consultation</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[90vh] md:min-h-screen flex items-center hero-bg overflow-hidden">
+        <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-20">
+            <div class="max-w-4xl space-y-6 md:space-y-8">
+                <div class="flex items-center space-x-4">
+                    <span class="h-[1px] w-12 bg-[#c5a059]"></span>
+                    <p class="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.4em] font-medium">Auckland — Ho Chi Minh City</p>
+                </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl serif text-white leading-[1.1]">
+                    Supply Chain. <br><span class="italic font-normal text-[#c5a059]">Transformed.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-300 font-light max-w-2xl leading-relaxed">
+                    Reimagining supply chain complexity to deliver <span class="text-white font-medium border-b border-[#c5a059]/30">real value, fast.</span>
+                </p>
+                <div class="flex pt-6">
+                    <a href="#expertise" class="bg-[#c5a059] text-white px-10 py-5 text-xs uppercase tracking-widest font-bold hover:bg-[#b08d4a] transition-all text-center">
+                        View Expertise
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Story Section -->
+    <section id="story" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-4xl serif gold-underline">The SCConnect Edge</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        We assist organisations to bring clarity to ambiguous and complex problems. We aren't career consultants; we are proven Operations Leaders who have managed multi-billion dollar P&Ls and led major supply chain transformations globally.
+                    </p>
+                    <p class="text-slate-600">
+                        Our approach is grounded in simplicity. We co-design collaborative processes to align demand and supply, bringing together policy, process, people, and data for precise decision-making.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 py-6 border-t border-slate-100">
+                        <div>
+                            <h4 class="serif text-xl mb-2 italic">Simplicity</h4>
+                            <p class="text-sm text-slate-500">Stripping complexity through deep operational tenure.</p>
+                        </div>
+                        <div>
+                            <h4 class="serif text-xl mb-2 italic">Innovation</h4>
+                            <p class="text-sm text-slate-500">Digital twin modelling to unlock strategic value.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square bg-slate-100 shadow-2xl overflow-hidden rounded-sm">
+                        <!-- User's Strategic Desk Image -->
+                        <img src="scc image desk.jpg" 
+                             alt="Strategic Collaboration" class="w-full h-full object-cover premium-img">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-[#c5a059] text-white p-10 hidden xl:block">
+                        <p class="text-3xl serif italic leading-none">Simplicity.</p>
+                        <p class="text-xs uppercase tracking-widest mt-2">Delivered.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+            <div class="mb-20 space-y-4">
+                <p class="text-[#c5a059] text-xs uppercase tracking-[0.3em] font-bold">Solutions Overview</p>
+                <h2 class="text-5xl serif">Service Methodology</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-10 border border-slate-100 shadow-sm flex flex-col h-full text-left">
+                    <div class="w-12 h-12 mb-8 bg-slate-900 flex items-center justify-center text-white text-xs font-bold">01</div>
+                    <h3 class="text-2xl serif mb-4">Supply Chain Strategy</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Developing future-oriented strategies designed to meet key business drivers and deliver measurable EBIT improvements.</p>
+                    <ul class="mt-auto space-y-2 text-[10px] uppercase tracking-widest text-slate-400 font-bold">
+                        <li>• Network Infrastructure</li>
+                        <li>• Market Entry Strategy</li>
+                    </ul>
+                </div>
+
+                <div class="service-card bg-white p-10 border border-slate-100 shadow-sm flex flex-col h-full text-left">
+                    <div class="w-12 h-12 mb-8 bg-slate-900 flex items-center justify-center text-white text-xs font-bold">02</div>
+                    <h3 class="text-2xl serif mb-4">Integrated Planning</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">S&OP and IBP implementation. We co-design collaborative processes to align demand and supply through data integrity.</p>
+                    <ul class="mt-auto space-y-2 text-[10px] uppercase tracking-widest text-slate-400 font-bold">
+                        <li>• Inventory Optimization</li>
+                        <li>• Maturity Assessments</li>
+                    </ul>
+                </div>
+
+                <div class="service-card bg-white p-10 border border-slate-100 shadow-sm flex flex-col h-full text-left">
+                    <div class="w-12 h-12 mb-8 bg-slate-900 flex items-center justify-center text-white text-xs font-bold">03</div>
+                    <h3 class="text-2xl serif mb-4">Logistics Excellence</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">Optimizing end-to-end networks, providing solutions for complex distribution and last-mile logistics.</p>
+                    <ul class="mt-auto space-y-2 text-[10px] uppercase tracking-widest text-slate-400 font-bold">
+                        <li>• 3PL Contracting</li>
+                        <li>• DC Design & Workflow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engagements Section -->
+    <section id="engagements" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid lg:grid-cols-3 gap-16">
+                <div class="space-y-6">
+                    <p class="text-[#c5a059] text-xs uppercase tracking-[0.3em] font-bold">Track Record</p>
+                    <h2 class="text-4xl serif leading-tight">Strategic Transformations</h2>
+                    <p class="text-slate-600 leading-relaxed">
+                        We develop comprehensive strategies to solve complex problems for market leaders, resulting in strategic clarity, EBIT improvements, and operational transformation.
+                    </p>
+                </div>
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+                    <div class="engagement-item">
+                        <h4 class="text-sm font-bold mb-2">Network Architecture</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed italic">Advised on network strategy and business cases for e-commerce enablement, private label expansion, and service improvements.</p>
+                    </div>
+                    <div class="engagement-item">
+                        <h4 class="text-sm font-bold mb-2">National Policy Advisory</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed italic">Reference Group member for national government policy on New Zealand's Freight and Supply Chain Strategy.</p>
+                    </div>
+                    <div class="engagement-item">
+                        <h4 class="text-sm font-bold mb-2">$64M Efficiency Realization</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed italic">Led end-to-end post-merger supply chain integration for a $7B leader, delivering $64M in sustainable cost savings over 4 years.</p>
+                    </div>
+                    <div class="engagement-item">
+                        <h4 class="text-sm font-bold mb-2">$200M+ Asset Modernization</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed italic">Orchestrated a 10-year infrastructure overhaul including $200M+ in automated distribution assets and best-in-class systems.</p>
+                    </div>
+                    <div class="engagement-item">
+                        <h4 class="text-sm font-bold mb-2">Industrial Optimization</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed italic">Analysed routes-to-market for major industrial manufacturers, resulting in significant reductions in obsolete inventory and network optimization.</p>
+                    </div>
+                    <div class="engagement-item">
+                        <h4 class="text-sm font-bold mb-2">20-Year Clinical Planning</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed italic">Mobilized healthcare stakeholders around a 20-year strategy to reset long-term infrastructure and clinical capability needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director Spotlight -->
+    <section id="director" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-full lg:w-1/3 max-w-sm mx-auto">
+                    <div class="aspect-[3/4] bg-slate-200 shadow-2xl overflow-hidden relative">
+                        <!-- User's Portrait Image -->
+                        <img src="vg 24.8.21 v2.jpg" 
+                             alt="Vaughan Grant" class="w-full h-full object-cover grayscale brightness-[1.02]">
+                    </div>
+                </div>
+                <div class="w-full lg:w-2/3 space-y-8">
+                    <div class="space-y-2">
+                        <p class="text-[#c5a059] text-xs uppercase tracking-[0.3em] font-bold">Director & Founder</p>
+                        <h2 class="text-5xl serif">Vaughan Grant</h2>
+                        <p class="text-slate-400 text-sm uppercase tracking-widest">BMS, Chartered Accountant</p>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-lg font-light">
+                        Vaughan is a seasoned executive with over 30 years' experience driving operational excellence across Australasia and the UK. Having held significant C-level roles in $7B+ enterprises, he brings a pragmatic bridge between financial rigour and operational reality.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed italic border-l-2 border-[#c5a059] pl-8 py-2">
+                        "I assist organisations to bring clarity to ambiguous problems. We provide results that are fit for purpose, future-proofed, and commercially rigorous."
+                    </p>
+                    <div class="pt-6">
+                        <a href="https://www.linkedin.com/in/vaughangrant" target="_blank" class="inline-flex items-center space-x-3 text-xs font-bold uppercase tracking-[0.2em] hover:text-[#c5a059] transition-colors bg-white px-8 py-5 shadow-sm border border-slate-100">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <span>Connect on LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center space-y-12">
+            <h2 class="text-3xl md:text-4xl serif italic">Bring clarity to your operational complexity.</h2>
+            
+            <div id="form-container" class="bg-slate-50 p-8 md:p-16 shadow-sm border border-slate-100 text-left relative overflow-hidden">
+                <form id="consultation-form" class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Full Name</label>
+                        <input required type="text" class="w-full border-b border-slate-200 bg-transparent py-3 outline-none focus:border-[#c5a059] transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Organization</label>
+                        <input required type="text" class="w-full border-b border-slate-200 bg-transparent py-3 outline-none focus:border-[#c5a059] transition-all">
+                    </div>
+                    <div class="md:col-span-2 space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500">How can we help</label>
+                        <textarea required rows="4" class="w-full border-b border-slate-200 bg-transparent py-3 outline-none focus:border-[#c5a059] transition-all"></textarea>
+                    </div>
+                    <div class="md:col-span-2 pt-6 text-center">
+                        <button type="submit" class="w-full max-w-sm bg-slate-900 text-white py-5 text-xs uppercase tracking-widest font-bold hover:bg-[#c5a059] transition-all mx-auto shadow-xl">
+                            Lets Connect
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Professional Success State -->
+                <div id="success-message" class="hidden absolute inset-0 bg-white flex flex-col items-center justify-center text-center p-12 z-20 fade-in">
+                    <div class="w-20 h-20 bg-[#c5a059]/10 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-10 h-10 text-[#c5a059]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h3 class="serif text-3xl mb-4">Request Received</h3>
+                    <p class="text-slate-500 text-base italic max-w-md">Thank you. We will review your inquiry and contact you to schedule a consultation.</p>
+                    <button onclick="location.reload()" class="mt-8 text-[10px] uppercase tracking-widest font-bold text-slate-400 hover:text-slate-900 transition-colors">Submit Another Request</button>
+                </div>
+            </div>
+            
+            <!-- Contact Channels -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm font-medium pt-12 border-t border-slate-50">
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Auckland</p>
+                    <a href="tel:+64274583107" class="hover:text-[#c5a059] text-[15px] tracking-wide">+64 27 458 3107</a>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Ho Chi Minh City</p>
+                    <a href="tel:+84367423954" class="hover:text-[#c5a059] text-[15px] tracking-wide">+84 367 423 954</a>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Direct Channel</p>
+                    <a href="mailto:Vaughan.Grant@scconnect.co.nz" class="hover:text-[#c5a059] text-[14px] lowercase border-b border-transparent hover:border-[#c5a059] transition-all">Vaughan.Grant@scconnect.co.nz</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 text-slate-400 text-[10px] uppercase tracking-[0.3em] border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="text-center md:text-left">© 2025 SCCONNECT — STRATEGIC SUPPLY CHAIN CONSULTANCY</p>
+            <div class="flex gap-16">
+                <a href="https://www.linkedin.com/in/vaughangrant" target="_blank" class="hover:text-[#c5a059] font-bold text-slate-900">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation Control
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeMenu.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        });
+
+        // Form UX Control
+        const form = document.getElementById('consultation-form');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successMessage.classList.remove('hidden');
+            document.getElementById('form-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>

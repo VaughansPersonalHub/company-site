@@ -63,7 +63,7 @@
             position: absolute;
             left: -1px;
             top: 0;
-            height: 1.5rem;
+            height: 2rem;
             width: 1px;
             background: var(--gold);
         }
@@ -184,7 +184,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
             <div class="mb-20 space-y-4">
                 <p class="text-[#c5a059] text-xs uppercase tracking-[0.3em] font-bold">Solutions Overview</p>
-                <h2 class="text-5xl serif">Our Services</h2>
+                <h2 class="text-5xl serif">Expertise Portfolio</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -255,7 +255,7 @@
                     </div>
                     <div class="engagement-item">
                         <h4 class="text-sm font-bold mb-2">$64M Efficiency Realization</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed italic">Led end-to-end post-merger supply chain integration for a $7B retailer, delivering $64M in sustainable cost savings over 4 years.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed italic">Led end-to-end post-merger supply chain integration for a $7B leader, delivering $64M in sustainable cost savings over 4 years.</p>
                     </div>
                     <div class="engagement-item">
                         <h4 class="text-sm font-bold mb-2">$200M+ Asset Modernization</h4>
@@ -278,7 +278,7 @@
     <section id="director" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="w-full lg:w-1/3 max-w-sm mx-auto">
+                <div class="w-full lg:w-1/3 max-sm:px-10">
                     <div class="aspect-[3/4] bg-slate-200 shadow-2xl overflow-hidden relative">
                         <img src="vg 24.8.21 v2.jpg" alt="Vaughan Grant" class="w-full h-full object-cover grayscale brightness-[1.02]">
                     </div>
@@ -306,54 +306,62 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact" class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center space-y-12">
+    <!-- Contact Form Section (Streamlined Consultation) -->
+    <section id="contact" class="py-16 md:py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center space-y-8">
             <h2 class="text-3xl md:text-4xl serif italic">Bring clarity to your operational complexity.</h2>
             
-            <div id="form-container" class="bg-slate-50 p-8 md:p-16 shadow-sm border border-slate-100 text-left relative overflow-hidden">
-                <form id="consultation-form" class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="space-y-2">
+            <div id="form-container" class="bg-slate-50 p-6 md:p-12 shadow-sm border border-slate-100 text-left relative overflow-hidden">
+                <form id="consultation-form" class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
+                    <div class="space-y-1">
                         <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Full Name</label>
-                        <input required type="text" class="w-full border-b border-slate-200 bg-transparent py-3 outline-none focus:border-[#c5a059] transition-all">
+                        <input required type="text" class="w-full border-b border-slate-300 bg-transparent py-2 outline-none focus:border-[#c5a059] transition-all text-sm">
                     </div>
-                    <div class="space-y-2">
+                    <div class="space-y-1">
                         <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Organization</label>
-                        <input required type="text" class="w-full border-b border-slate-200 bg-transparent py-3 outline-none focus:border-[#c5a059] transition-all">
+                        <input required type="text" class="w-full border-b border-slate-300 bg-transparent py-2 outline-none focus:border-[#c5a059] transition-all text-sm">
                     </div>
-                    <div class="md:col-span-2 space-y-2">
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Email Address</label>
+                        <input required type="email" class="w-full border-b border-slate-300 bg-transparent py-2 outline-none focus:border-[#c5a059] transition-all text-sm">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500">Phone Number</label>
+                        <input required type="tel" class="w-full border-b border-slate-300 bg-transparent py-2 outline-none focus:border-[#c5a059] transition-all text-sm">
+                    </div>
+                    <div class="md:col-span-2 space-y-1">
                         <label class="text-[10px] uppercase tracking-widest font-bold text-slate-500">How can we help</label>
-                        <textarea required rows="4" class="w-full border-b border-slate-200 bg-transparent py-3 outline-none focus:border-[#c5a059] transition-all"></textarea>
+                        <textarea required rows="3" class="w-full border-b border-slate-300 bg-transparent py-2 outline-none focus:border-[#c5a059] transition-all text-sm"></textarea>
                     </div>
-                    <div class="md:col-span-2 pt-6 text-center">
-                        <button type="submit" class="w-full max-w-sm bg-slate-900 text-white py-5 text-xs uppercase tracking-widest font-bold hover:bg-[#c5a059] transition-all mx-auto shadow-xl">
+                    <div class="md:col-span-2 pt-4 text-center">
+                        <button type="submit" class="w-full max-w-sm bg-slate-900 text-white py-4 text-xs uppercase tracking-widest font-bold hover:bg-[#c5a059] transition-all mx-auto shadow-lg">
                             Lets Connect
                         </button>
                     </div>
                 </form>
 
-                <div id="success-message" class="hidden absolute inset-0 bg-white flex flex-col items-center justify-center text-center p-12 z-20 fade-in">
-                    <div class="w-20 h-20 bg-[#c5a059]/10 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-10 h-10 text-[#c5a059]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <div id="success-message" class="hidden absolute inset-0 bg-white flex flex-col items-center justify-center text-center p-8 z-20 fade-in">
+                    <div class="w-16 h-16 bg-[#c5a059]/10 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-[#c5a059]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                     </div>
-                    <h3 class="serif text-3xl mb-4">Request Received</h3>
-                    <p class="text-slate-500 text-base italic max-w-md">Thank you. We will review your inquiry and contact you to schedule a consultation.</p>
-                    <button onclick="location.reload()" class="mt-8 text-[10px] uppercase tracking-widest font-bold text-slate-400 hover:text-slate-900 transition-colors">Submit Another Request</button>
+                    <h3 class="serif text-2xl mb-2">Request Received</h3>
+                    <p class="text-slate-500 text-sm italic max-w-md">Thank you. We will review your inquiry and contact you to schedule a consultation.</p>
+                    <button onclick="location.reload()" class="mt-6 text-[9px] uppercase tracking-widest font-bold text-slate-400 hover:text-slate-900 transition-colors">Submit Another Request</button>
                 </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-sm font-medium pt-12 border-t border-slate-50">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm font-medium pt-8 border-t border-slate-50">
                 <div>
-                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Auckland</p>
-                    <a href="tel:+64274583107" class="hover:text-[#c5a059] text-[15px] tracking-wide">+64 27 458 3107</a>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-1">Auckland</p>
+                    <a href="tel:+64274583107" class="hover:text-[#c5a059] text-[13px] tracking-wide">+64 27 458 3107</a>
                 </div>
                 <div>
-                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Ho Chi Minh City</p>
-                    <a href="tel:+84367423954" class="hover:text-[#c5a059] text-[15px] tracking-wide">+84 367 423 954</a>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-1">Ho Chi Minh City</p>
+                    <a href="tel:+84367423954" class="hover:text-[#c5a059] text-[13px] tracking-wide">+84 367 423 954</a>
                 </div>
                 <div>
-                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-2">Direct Channel</p>
-                    <a href="mailto:Vaughan.Grant@scconnect.co.nz" class="hover:text-[#c5a059] text-[14px] lowercase border-b border-transparent hover:border-[#c5a059] transition-all">Vaughan.Grant@scconnect.co.nz</a>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mb-1">Direct Channel</p>
+                    <a href="mailto:Vaughan.Grant@scconnect.co.nz" class="hover:text-[#c5a059] text-[13px] lowercase border-b border-transparent hover:border-[#c5a059] transition-all">Vaughan.Grant@scconnect.co.nz</a>
                 </div>
             </div>
         </div>
@@ -392,4 +400,3 @@
     </script>
 </body>
 </html>
-

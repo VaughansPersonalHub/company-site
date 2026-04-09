@@ -15,13 +15,15 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .serif { font-family: 'Playfair Display', serif; }
         
-        .hero-bg {
-            background-image: linear-gradient(72deg, rgba(26,26,26,0.96) 0%, rgba(26,26,26,0.7) 100%), 
-                              url('Gemini_Generated_Image_jrdkcajrdkcajrdk.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
+   .hero-bg {
+    background-image: 
+        linear-gradient(to right, rgba(26,26,26,1) 0%, rgba(26,26,26,1) 35%, rgba(26,26,26,0.15) 60%, rgba(26,26,26,0) 100%),
+        url('Gemini_Generated_Image_jrdkcajrdkcajrdk.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 85%;
+    background-color: #1a1a1a;
+}
         .service-card {
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
@@ -125,11 +127,12 @@
                     <p class="text-[#c5a059] text-[10px] md:text-xs uppercase tracking-[0.4em] font-medium">Auckland — Ho Chi Minh City</p>
                 </div>
                 <h1 class="text-5xl md:text-7xl lg:text-8xl serif text-white leading-[1.1]">
-                    Supply Chain. <br><span class="italic font-normal text-[#c5a059]">Transformed.</span>
+    Supply Chain<br><span class="italic font-normal text-[#c5a059]">Transformed.</span>
+</h1>
                 </h1>
                 <p class="text-xl md:text-2xl text-slate-300 font-light max-w-2xl leading-relaxed">
-                    Reimagining supply chain complexity to deliver <span class="text-white font-medium border-b border-[#c5a059]/30">real value, fast.</span>
-                </p>
+    Reimagining supply chain complexity to deliver <span class="text-white font-medium border-b border-[#c5a059]/30 whitespace-nowrap">real value, fast.</span>
+</p>
                 <div class="flex pt-6">
                     <a href="#expertise" class="bg-[#c5a059] text-white px-10 py-5 text-xs uppercase tracking-widest font-bold hover:bg-[#b08d4a] transition-all text-center">
                         View Expertise
